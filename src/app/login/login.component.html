@@ -1,0 +1,38 @@
+<!-- 
+
+Form pre-requisites:
+--------------------
+
+- Import form gourp in ng modules
+- import in the component TS
+
+https://angular.io/guide/reactive-forms
+
+-->
+
+<div class="LoginContainer row">
+    <div class="col">
+    </div>
+
+    <!-- Middle column -->
+    <div class="col">
+        <p>Enter details:<p>
+
+        <!-- Login form -->
+        <form class="form-group" [formGroup]="LoginForm" (ngSubmit)="LoginSubmit()">
+            <input formControlName="email" class="form-control my-2" type="email" placeholder="<sheesh>@<provider>.com"/>
+            <input formControlName="password" class="form-control my-2" type="password"/>
+            <p class="text-muted">
+                Please ensure you type the correct details
+            </p>
+            <button class="form-control btn btn-primary" type="submit">
+                Sign in
+            </button>
+            <p class="my-2"><a class="text-danger" href="">Forgot password?</a></p>
+        </form>
+    </div>
+
+    <div class="col">
+    </div>
+
+</div>
